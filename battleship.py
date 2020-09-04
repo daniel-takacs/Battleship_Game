@@ -17,7 +17,9 @@
 import random
 
 def printing_score ():
+  print("-------------")
   print("Score:", computer_score,"-", user_score)
+  print("-------------")
 
 print("|----------------------------|")
 print("|--- // Battleship game //---|")
@@ -61,7 +63,7 @@ for turn in range(5):
     else: 
       computer_score += 1
       print("You missed my Battleship!")
-      board[user_row][user_col] = "X"
+      board[(user_row)-1][(user_col)-1] = "X"
       board_printing(board)
       printing_score()
 
