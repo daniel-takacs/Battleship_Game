@@ -1,18 +1,3 @@
-"""  van egy 5 x 5 os boardunk
-1. ki kell printelni:
-    0 0 0 0 0
-    0 0 0 0 0
-    0 0 0 0 0
-    0 0 0 0 0
-2. kiiratni h hanyadik korben vagyunk (5 korig mehet)                  
-3. bekerni 1-5-ig a sort
-4. bekerni 1-5-ig az oszlopot 
-5. randomint-el bekerni egy szamot a sorban es az oszlopban a computertol
-6. megnezni h egyeznek -e
-7. kiirni h eltalalt -e
-8. kiprintelni a tombot benne a kivalasztott elemet x-el jelolve
-9. megnezni az allast es kiiratni h ki nyert
-"""
 
 import random
 
