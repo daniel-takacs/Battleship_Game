@@ -46,8 +46,24 @@ letters_to_numbers = {
 }
 
 #ai random guess
+
 computer_row = (random.randint(1,5)-1)
 computer_col = random.choice(string.ascii_letters[0:4])
+
+#function compare the scores and printing who win
+
+def score_compare (computer_score, user_score):
+
+    if computer_score > user_score:
+      board[computer_row][column_number_ai] = "-"
+      print_board(board)
+      print ("\nGAME OVER!")
+    elif computer_score == user_score:
+      print("\nTie Game")
+    else:
+      print("\nYOU WIN")
+
+
 
 #game (turn to 5)
 for turn in range(5):
@@ -71,6 +87,7 @@ for turn in range(5):
     column_number = letters_to_numbers[user_col]
     column_number_ai = letters_to_numbers[computer_col]
 
+
     if user_row == computer_row and user_col == computer_col:
       print("\nYOU SANK MY BATTLESHIP!")
       user_score += 1
@@ -83,12 +100,5 @@ for turn in range(5):
       print_board(board)
       printing_score()
 
-#compare the scores and printing who won
-if computer_score > user_score:
-  board[computer_row][column_number_ai] = "-"
-  print_board(board)
-  print ("\nGAME OVER!")
-elif computer_score == user_score:
-  print("\nTie Game")
-else:
-  print("\nYOU WIN")
+
+score_compare(computer_score, user_score)
